@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_above="@+id/task_menu">
+
+    </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/splootcolour"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Task"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight=".3"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    />
+
+            <ImageView
+                    android:id="@+id/task_close"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight=".7"
+                    android:src="@drawable/ic_highlight_off" />
+        </LinearLayout>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <EditText android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/enter_task_name"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"
+                    android:background="@drawable/ic_login_edittext"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:inputType="text"
+                    android:hint="Enter task name here"
+                    android:textStyle="bold"
+                    android:textColor="@color/signup"
+
+                    />
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/duration_click_layout"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Duration"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/duration_hint"
+                        android:text="Set Duration Here"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/signup"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/duration_layout"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/start_day_layout"
+                        android:orientation="vertical">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Start date"
+                            android:textSize="16dp"
+                            />
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/start_date_select"
+                            android:textSize="16dp"
+                            android:text="Today"
+                            />
+                </LinearLayout>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/signup"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"/>
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        >
+                    <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <RadioButton
+                                android:id="@+id/radio_group1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                android:background="?android:selectableItemBackground"
+                                android:layoutDirection="rtl"
+                                android:layout_gravity="start"
+                                android:textAlignment="textStart"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:paddingTop="10dp"
+                                android:buttonTint="@color/splootcolour"
+                                android:text="No end date"
+                                android:textSize="14sp" />
+
+                        <RadioButton
+                                android:id="@+id/radio_group2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                android:background="?android:selectableItemBackground"
+                                android:layoutDirection="rtl"
+                                android:layout_gravity="start"
+                                android:textAlignment="textStart"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:buttonTint="@color/splootcolour"
+                                android:paddingTop="10dp"
+                                android:text="Untill date"
+                                android:textSize="14sp" />
+
+                        <RadioButton
+                                android:id="@+id/radio_group3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                android:background="?android:selectableItemBackground"
+                                android:layoutDirection="rtl"
+                                android:layout_gravity="start"
+                                android:textAlignment="textStart"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:buttonTint="@color/splootcolour"
+                                android:paddingTop="10dp"
+                                android:text="For X days"
+                                android:textSize="14sp" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@id/durationlayout"
+                        >
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/signup"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"/>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="util"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/duration_data_format"
+                            android:textSize="15dp"
+
+                            />
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/duration_data"
+                            android:hint="No data"
+                            android:textSize="16dp"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/frequency_click_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Frequency"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/frequency_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Set Frequency Here" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/signup" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/frequency_layout"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radio_group"
+                        >
+
+                    <RadioButton
+                            android:id="@+id/radio_Button1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                            android:background="?android:selectableItemBackground"
+                            android:layoutDirection="rtl"
+                            android:layout_gravity="start"
+                            android:buttonTint="@color/splootcolour"
+                            android:textAlignment="textStart"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:text="Daily,X times a day"
+                            android:textSize="14sp" />
+
+                    <RadioButton
+                            android:id="@+id/radio_Button2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                            android:background="?android:selectableItemBackground"
+                            android:layoutDirection="rtl"
+                            android:layout_gravity="start"
+                            android:textAlignment="textStart"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:visibility="gone"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:buttonTint="@color/splootcolour"
+                            android:text="Daily, every X hours"
+                            android:textSize="14sp" />
+
+                    <RadioButton
+                            android:id="@+id/radio_Button3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                            android:background="?android:selectableItemBackground"
+                            android:layoutDirection="rtl"
+                            android:layout_gravity="start"
+                            android:textAlignment="textStart"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:buttonTint="@color/splootcolour"
+                            android:paddingTop="10dp"
+                            android:text="Every X days"
+                            android:textSize="14sp" />
+                    <RadioButton
+                            android:id="@+id/radio_Button4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                            android:background="?android:selectableItemBackground"
+                            android:layoutDirection="rtl"
+                            android:layout_gravity="start"
+                            android:textAlignment="textStart"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:buttonTint="@color/splootcolour"
+                            android:text="Specific days of week"
+                            android:textSize="14sp" />
+                    <RadioButton
+                            android:id="@+id/radio_Button5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                            android:background="?android:selectableItemBackground"
+                            android:layoutDirection="rtl"
+                            android:layout_gravity="start"
+                            android:textAlignment="textStart"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:buttonTint="@color/splootcolour"
+                            android:text="Cycle:X days active, Y days paused"
+                            android:textSize="14sp" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/xy_view"
+                        android:visibility="gone"
+                        >
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/day_active_layout"
+                            >
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Days active"
+                                android:textSize="@dimen/normaltext"
+                                android:textStyle="bold"
+                                />
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/day_activevery_text"
+                                android:hint="Tap to select Reminder"
+                                />
+                    </LinearLayout>
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/Day_paused_layout"
+                            >
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Days paused"
+                                android:textSize="@dimen/normaltext"
+                                android:textStyle="bold"
+                                />
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/Day_paused_text"
+                                android:hint="Tap to select First Intake"
+                                />
+                    </LinearLayout>
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/cycle_day_layout"
+                            >
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Today is cycle day"
+                                android:textSize="@dimen/normaltext"
+                                android:textStyle="bold"
+                                />
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/today_cycle_text"
+                                android:hint="Tap to select Last Intake"
+                                />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/check_box_layout"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+                    <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/Monday_"
+                            android:buttonTint="@color/splootcolour"
+                            android:text="Monday"
+                            />
+                    <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tueasdy_"
+                            android:buttonTint="@color/splootcolour"
+                            android:text="Tuesday"
+                            />
+                    <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/wednesday_"
+                            android:buttonTint="@color/splootcolour"
+                            android:text="Wednesday"
+                            />
+                    <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/thuesday_"
+                            android:buttonTint="@color/splootcolour"
+                            android:text="Thusday"
+                            />
+                    <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/friday_"
+                            android:buttonTint="@color/splootcolour"
+                            android:text="Friday"
+                            />
+                    <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/saterday_"
+                            android:buttonTint="@color/splootcolour"
+                            android:text="Saterday"
+                            />
+                    <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sunday_"
+                            android:buttonTint="@color/splootcolour"
+                            android:text="Sunday"
+                            />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/task_freq_data_layout"
+                        >
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/signup"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp"/>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Utill"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/task_freq_format"
+                            />
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/task_freq_data"
+                            android:hint="No data"
+                            />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/alaram_click_layout"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Set Reminder"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16dp"
+                        />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/alaram_hint"
+                        android:text="Set reminder here"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reminder_recycler"
+                    />
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/add_reminder"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"
+                    >
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_alarm_black"
+                        android:layout_weight="3"
+                        />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Add Reminder Time"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        />
+
+            </LinearLayout>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="SAVE"
+                    android:id="@+id/save_data"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_edittext"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/white"
+                    />
+        </LinearLayout>
+    </ScrollView>
+
+    </LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_gravity="center"
+        tools:context=".activities.AlarmActivity">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_sploot_logo2"
+            />
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reminder Title"
+            android:id="@+id/alarm_reminder_title"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+            />
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reminder Name"
+            android:gravity="center"
+
+            android:id="@+id/alarm_reminder_name"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reminder Time"
+            android:gravity="center"
+
+            android:id="@+id/alarm_reminder_time"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+
+            />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/ic_edittext"
+            android:text="ok"
+            android:id="@+id/alarm_close"
+            />
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+
+        android:layout_marginBottom="10dp"
+
+        android:background="@color/cms_back"
+
+        android:id="@+id/card_click"
+
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            >
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:text="bghdb"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/headertxt"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:text="bghdb"
+                android:id="@+id/sub_txt"/>
+
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="250dp"
+
+                android:scaleType="fitXY"
+                android:id="@+id/card_image_view"
+                />
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="author"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/cms_author"
+                />
+
+
+        <WebView
+                android:id="@+id/html_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

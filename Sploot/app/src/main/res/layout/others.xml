@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:id="@+id/othersdata"
+            android:hint="Enter note here"
+            android:background="@drawable/rectangle"
+         android:layout_margin="20dp"
+            android:inputType="textImeMultiLine"
+            />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="SAVE"
+            android:id="@+id/otherssave"
+            android:layout_gravity="center"
+
+            android:background="@drawable/ic_edittext"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

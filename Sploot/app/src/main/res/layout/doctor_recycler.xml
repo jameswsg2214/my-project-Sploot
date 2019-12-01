@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/doctor_name_view"
+                android:hint="No name"
+                android:textSize="18dp"
+                />
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/doctor_address"
+                android:hint="no address"
+                />
+
+    </LinearLayout>
+    <Button
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight=".2"
+            android:text="Edit"
+            android:id="@+id/doctor_edit"
+            android:background="@drawable/ic_edittext"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginRight="5dp"
+            />
+    <Button
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:text="Delete"
+            android:id="@+id/doctor_delete"
+            android:background="@drawable/ic_edittext"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_weight=".2"/>
+
+</LinearLayout>
